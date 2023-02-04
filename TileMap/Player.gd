@@ -42,3 +42,5 @@ func _physics_process(delta):
 func hurt():
 	health -= 10
 	print(health)
+
+
