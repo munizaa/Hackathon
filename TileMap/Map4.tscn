@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://StoneTile.tscn" type="PackedScene" id=1]
+
+[node name="Map4" type="Node2D"]
+
+[node name="StoneTile" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 608 )
+rotation = 3.14049
+
+[node name="StoneTile2" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -64, -0.0706177 )
+
+[node name="StoneTile3" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -128, -0.141418 )
+
+[node name="StoneTile4" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -192, -0.212158 )
+
+[node name="StoneTile5" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -256, -0.282898 )
+
+[node name="StoneTile6" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -320, -0.353638 )
+
+[node name="StoneTile7" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -384, -0.424438 )
+
+[node name="StoneTile8" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -448, -0.495178 )
+
+[node name="StoneTile9" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -512, -0.565918 )
+
+[node name="StoneTile10" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -576, -0.636597 )
+
+[node name="StoneTile12" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -704, -0.778015 )
+
+[node name="StoneTile13" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -768, -0.848755 )
+
+[node name="StoneTile14" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -640, -0.707275 )
+
+[node name="StoneTile15" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -959.999, -1.06091 )
+
+[node name="StoneTile16" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -895.999, -0.990234 )
+
+[node name="StoneTile17" parent="StoneTile" instance=ExtResource( 1 )]
+position = Vector2( -832, -0.919495 )
