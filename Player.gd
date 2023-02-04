@@ -17,7 +17,7 @@ var vel : Vector2 = Vector2()
 # var sprite : Sprite = $Sprite  
 
 onready var player : Sprite = get_node("Sprite")
-onready var health = max_health setget _set_health
+onready var health = max_health
 onready var invulnerability_timer = $Invulnerability_timer
 
 func _physics_process(delta):
@@ -46,51 +46,27 @@ func _physics_process(delta):
 	elif vel.x > 0:
 		player.flip_h = false
 
-func hurt():
-	_set_health(health - 10);
-	#health -= 10
-	print(health)
 func kill():
 	print("PLAYER HAS DIED!!!");
-
-func _set_health(value):
-	# Temporary Variable to remember the health value
-	var prev_health = health
-	health = max(0, value)
-	# Same as => health = clamp(value, 0, max_health);
-	# Indication that the player has taken some form of damage
-	if prev_health != health:
-		emit_signal("health_updated", health);
-		if (health == 0):
-			kill();
-			emit_signal("killed");
-	
-#func get_health() -> int:
-#	return health
 
 func _on_Player_health_updated():
 	# Temporary Variable to remember the health value
 	
-	if (invulnerability_timer.get_time_left() == 0.0 and invulnerability_timer.is_stopped()):
-		print("TIMER OUT")
 	if (invulnerability_timer.is_stopped()):
 		invulnerability_timer.start()
-		modulate.a = 0.5
-	#	for i in 2:
-			
-			#modulate.a = 0.5;
-			
-			#modulate.a = 1;
 		
-		print(">>>>>>>>>>>>>>");
+		# TO-DO
+		# Want to add a flicker to the Player to indicate
+		# the player has taken damage.
+		
+		# modulate.a = 0.5
+		
 		var prev_health = health
 		health = max(0, health - 10)
 		# Same as => health = clamp(value, 0, max_health);
 		# Indication that the player has taken some form of damage
 		if prev_health != health:
-			#emit_signal("health_updated");
-			
-			print(str(health) + " <<<<<<<<<<<<<<<<<<<<<");
+			print(str(health));
 			if (health == 0):
 				kill();
 				emit_signal("killed");
