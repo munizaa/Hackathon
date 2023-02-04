@@ -40,7 +40,9 @@ func _physics_process(delta):
 	elif count > 450:
 		count = 0
 
-func _on_EnemyMap_body_entered(body):
-	if body.has_method("hurt"):
+func _on_Enemy_body_entered(body):
+	if body.is_in_group("Player"):
 		body.hurt()
+		print("test")
+
 
