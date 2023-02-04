@@ -39,8 +39,3 @@ func _physics_process(delta):
 	elif vel.x > 0:
 		player.flip_h = false
 
-func hurt():
-	health -= 10
-	print(health)
-
-
