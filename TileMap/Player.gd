@@ -1,16 +1,17 @@
 extends KinematicBody2D
 
-var score : int = 0
-var speed : int = 200
-var jumpForce : int = 600
-var gravity : int = 800
+var score : int = 0  # +1 for each Petr
+var speed : int = 200  # speed of player
+var jumpForce : int = 400  # force of jumps
+var gravity : int = 1000  # pulls player down
+var health : int = 100
 
 var vel : Vector2 = Vector2()
 
 # sprite variable references sprite node
 # var sprite : Sprite = $Sprite  
 
-onready var sprite : Sprite = get_node("Sprite")
+onready var player : Sprite = get_node("Sprite")
 
 func _physics_process(delta):
 	# gets called 60 times a second
@@ -34,6 +35,10 @@ func _physics_process(delta):
 	
 	# player direction
 	if vel.x < 0:
-		sprite.flip_h = true
+		player.flip_h = true
 	elif vel.x > 0:
-		sprite.flip_h = false
+		player.flip_h = false
+		
+func hurt():
+	health -= 10
+	print(health)
