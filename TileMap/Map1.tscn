@@ -224,6 +224,7 @@ position = Vector2( 856, 552 )
 [node name="Node" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 14.0
 script = ExtResource( 4 )
