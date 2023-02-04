@@ -42,7 +42,6 @@ func _physics_process(delta):
 		count = 0
 
 func _on_Area2D_body_entered(body: KinematicBody2D):
-	#pass
 	# Checks if the body exist and if the body itself
 	# is a Player
 	# If so, We want to update the Player's health
