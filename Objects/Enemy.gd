@@ -1,13 +1,6 @@
 extends KinematicBody2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-# Called when the node enters the scene tree for the first time.
-# func _ready():
-	# add function body.
-	
+# Script for the Enemy ZotBots	
 var speed : int = 2  # speed of zotbot
 var gravity : int = 50  # pulls zotbot down
 var current_state = "LEFT"
@@ -42,7 +35,6 @@ func _physics_process(delta):
 		count = 0
 
 func _on_Area2D_body_entered(body: KinematicBody2D):
-	#pass
 	# Checks if the body exist and if the body itself
 	# is a Player
 	# If so, We want to update the Player's health
