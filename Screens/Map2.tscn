@@ -1,16 +1,26 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Blocks/GrassTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blocks/StoneTile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blocks/DarkStoneTile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Blocks/GrassTileAlt.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Blocks/DirtTile.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Entrance.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Other/Entrance.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Blocks/Timer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Screens/Levels.gd" type="Script" id=10]
+[ext_resource path="res://Blocks/Health.gd" type="Script" id=11]
+[ext_resource path="res://Utils/images/top left background.png" type="Texture" id=12]
 
 [node name="Map2" type="Node2D"]
 position = Vector2( -45, -5 )
+script = ExtResource( 10 )
+
+[node name="TopLeftBackground" type="Sprite" parent="."]
+position = Vector2( 386.5, 341 )
+scale = Vector2( 0.741146, 0.874674 )
+texture = ExtResource( 12 )
 
 [node name="DarkStoneTile" parent="." instance=ExtResource( 3 )]
 position = Vector2( 608, 544 )
@@ -177,8 +187,8 @@ position = Vector2( 960, 0 )
 [node name="StoneTile3" parent="StoneTile" instance=ExtResource( 2 )]
 position = Vector2( 128, 0 )
 
-[node name="Map1" parent="." instance=ExtResource( 6 )]
-position = Vector2( -36, 150 )
+[node name="Map5" parent="." instance=ExtResource( 6 )]
+position = Vector2( -32, 182 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -193,7 +203,26 @@ position = Vector2( 544, 529 )
 position = Vector2( 103, 339 )
 
 [node name="Map3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1094, 182 )
+position = Vector2( 1074, 178 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Label" parent="." instance=ExtResource( 9 )]
+margin_left = 59.0
+margin_top = 50.0
+margin_right = 158.0
+margin_bottom = 77.0
+
+[node name="Map3Pos" type="Position2D" parent="."]
+position = Vector2( 965, 274 )
+
+[node name="Map5Pos" type="Position2D" parent="."]
+position = Vector2( 105, 336 )
+
+[node name="HealthLabel" parent="." instance=ExtResource( 9 )]
+margin_left = 58.0
+margin_top = 17.0
+margin_right = 157.0
+margin_bottom = 44.0
+script = ExtResource( 11 )

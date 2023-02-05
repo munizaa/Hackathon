@@ -1,14 +1,30 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Blocks/DarkStoneTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blocks/DirtTile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blocks/GrassTile.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Blocks/Timer.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Entrance.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Other/Entrance.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/SpiderPetr.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Screens/Levels.gd" type="Script" id=8]
+[ext_resource path="res://Utils/images/bottom left background.png" type="Texture" id=9]
 
 [node name="Map5" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="BottomLeftBackground" type="Sprite" parent="."]
+position = Vector2( 512, 343 )
+texture = ExtResource( 9 )
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource( 5 )]
+position = Vector2( 103, 481 )
+
+[node name="Map2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1074, 161 )
+
+[node name="Map4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -43, 315 )
 
 [node name="DarkStoneTile" parent="." instance=ExtResource( 1 )]
 position = Vector2( 32, 608 )
@@ -58,26 +74,35 @@ position = Vector2( 960, 0 )
 [node name="DarkStoneTile15" parent="DarkStoneTile" instance=ExtResource( 1 )]
 position = Vector2( 704, 0 )
 
-[node name="Tile" parent="." instance=ExtResource( 3 )]
-position = Vector2( 96, 544 )
-
-[node name="DarkStoneTile17" parent="Tile" instance=ExtResource( 1 )]
-position = Vector2( -64, -512 )
-
-[node name="DarkStoneTile18" parent="Tile" instance=ExtResource( 1 )]
-position = Vector2( -64, -448 )
-
-[node name="DarkStoneTile19" parent="Tile" instance=ExtResource( 1 )]
-position = Vector2( 0, -512 )
-
-[node name="DarkStoneTile20" parent="Tile" instance=ExtResource( 1 )]
+[node name="DarkStoneTile22" parent="DarkStoneTile" instance=ExtResource( 1 )]
 position = Vector2( 0, -448 )
 
-[node name="DarkStoneTile21" parent="Tile" instance=ExtResource( 1 )]
+[node name="DarkStoneTile23" parent="DarkStoneTile" instance=ExtResource( 1 )]
+position = Vector2( 0, -448 )
+
+[node name="DarkStoneTile17" parent="DarkStoneTile" instance=ExtResource( 1 )]
+position = Vector2( 0, -576 )
+
+[node name="DarkStoneTile18" parent="DarkStoneTile" instance=ExtResource( 1 )]
+position = Vector2( 0, -512 )
+
+[node name="DarkStoneTile19" parent="DarkStoneTile" instance=ExtResource( 1 )]
+position = Vector2( 64, -576 )
+
+[node name="DarkStoneTile20" parent="DarkStoneTile" instance=ExtResource( 1 )]
 position = Vector2( 64, -512 )
 
-[node name="DarkStoneTile22" parent="Tile" instance=ExtResource( 1 )]
-position = Vector2( 256, 0 )
+[node name="DarkStoneTile21" parent="DarkStoneTile" instance=ExtResource( 1 )]
+position = Vector2( 128, -576 )
+
+[node name="DarkStoneTile24" parent="DarkStoneTile" instance=ExtResource( 1 )]
+position = Vector2( 384, -64 )
+
+[node name="DarkStoneTile25" parent="DarkStoneTile" instance=ExtResource( 1 )]
+position = Vector2( 192, -448 )
+
+[node name="Tile" parent="." instance=ExtResource( 3 )]
+position = Vector2( 96, 544 )
 
 [node name="DirtTile" parent="Tile" instance=ExtResource( 2 )]
 position = Vector2( -64, 0 )
@@ -107,16 +132,16 @@ position = Vector2( 768, -64 )
 position = Vector2( 704, 0 )
 
 [node name="Tile9" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 448, -128 )
+position = Vector2( 632, -128 )
 
 [node name="Tile10" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 112, -256 )
+position = Vector2( 360, -128 )
 
 [node name="Tile14" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 320, -192 )
+position = Vector2( 216, -192 )
 
 [node name="Tile15" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 72, -256 )
+position = Vector2( 320, -128 )
 
 [node name="Tile16" parent="Tile" instance=ExtResource( 3 )]
 position = Vector2( 512, -384 )
@@ -146,40 +171,73 @@ position = Vector2( 832, -448 )
 position = Vector2( 832, -448 )
 
 [node name="Tile11" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 152, -256 )
+position = Vector2( 400, -128 )
 
 [node name="Tile12" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 256, -192 )
+position = Vector2( 464, -128 )
 
 [node name="Tile13" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 256, -192 )
+position = Vector2( 264, -192 )
 
 [node name="Tile8" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 512, -128 )
+position = Vector2( 112, -256 )
 
 [node name="Tile7" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 576, -128 )
+position = Vector2( 152, -256 )
 
 [node name="Tile2" parent="Tile" instance=ExtResource( 3 )]
 position = Vector2( -64, -64 )
 
-[node name="Label" parent="." instance=ExtResource( 4 )]
-margin_left = 146.0
-margin_top = 87.0
-margin_right = 245.0
-margin_bottom = 114.0
+[node name="Tile22" parent="Tile" instance=ExtResource( 3 )]
+position = Vector2( 496, -448 )
 
-[node name="Map2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1072, 320 )
+[node name="Tile23" parent="Tile" instance=ExtResource( 3 )]
+position = Vector2( 568, -192 )
 
-[node name="Map4" parent="." instance=ExtResource( 5 )]
-position = Vector2( -32, 320 )
+[node name="Tile24" parent="Tile" instance=ExtResource( 3 )]
+position = Vector2( 528, -192 )
 
-[node name="Enemy" parent="." instance=ExtResource( 7 )]
-position = Vector2( 728, 520 )
+[node name="Tile28" parent="Tile" instance=ExtResource( 3 )]
+position = Vector2( 472, -384 )
 
-[node name="Enemy2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 272, 512 )
+[node name="Tile29" parent="Tile" instance=ExtResource( 3 )]
+position = Vector2( 320, -320 )
 
-[node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 40, 384 )
+[node name="DirtTile6" parent="Tile" instance=ExtResource( 2 )]
+position = Vector2( 896, -384 )
+
+[node name="DirtTile7" parent="Tile" instance=ExtResource( 2 )]
+position = Vector2( 896, -448 )
+
+[node name="DirtTile8" parent="Tile" instance=ExtResource( 2 )]
+position = Vector2( 896, -512 )
+
+[node name="DirtTile9" parent="Tile" instance=ExtResource( 2 )]
+position = Vector2( 896, -576 )
+
+[node name="DirtTile10" parent="Tile" instance=ExtResource( 2 )]
+position = Vector2( 896, -640 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 560, 344 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 800, 96 )
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 664, 544 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 232, 544 )
+
+[node name="SpiderPetr" parent="." instance=ExtResource( 7 )]
+position = Vector2( 928, 32 )
+
+[node name="SpiderPetr2" parent="SpiderPetr" instance=ExtResource( 7 )]
+position = Vector2( -704, 64 )
+
+[node name="Map4Pos" type="Position2D" parent="."]
+position = Vector2( 40, 360 )
+
+[node name="Map2Pos" type="Position2D" parent="."]
+position = Vector2( 984, 416 )

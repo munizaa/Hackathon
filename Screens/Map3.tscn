@@ -1,11 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Blocks/DirtTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blocks/GrassTile.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Entrance.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Other/Entrance.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Blocks/Timer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Screens/Levels.gd" type="Script" id=7]
+[ext_resource path="res://Utils/images/top right background.png" type="Texture" id=8]
 
 [node name="Map3" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="TopRightBackground" type="Sprite" parent="."]
+position = Vector2( 517, 402 )
+texture = ExtResource( 8 )
 
 [node name="Tile" parent="." instance=ExtResource( 2 )]
 position = Vector2( 992, 544 )
@@ -66,6 +75,12 @@ position = Vector2( -256, -384 )
 
 [node name="Tile20" parent="Tile" instance=ExtResource( 2 )]
 position = Vector2( -256, -384 )
+
+[node name="Tile21" parent="Tile" instance=ExtResource( 2 )]
+position = Vector2( -704, 0 )
+
+[node name="Tile22" parent="Tile" instance=ExtResource( 2 )]
+position = Vector2( -320, 0 )
 
 [node name="DirtTile" parent="." instance=ExtResource( 1 )]
 position = Vector2( 32, 608 )
@@ -133,11 +148,26 @@ position = Vector2( 768, 0 )
 [node name="DirtTile22" parent="DirtTile" instance=ExtResource( 1 )]
 position = Vector2( 960, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource( 3 )]
 position = Vector2( 78, 504 )
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 512, 544 )
 
 [node name="Map4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1059, 246 )
 
 [node name="Map2" parent="." instance=ExtResource( 4 )]
 position = Vector2( -42, 376 )
+
+[node name="Label" parent="." instance=ExtResource( 5 )]
+margin_left = 50.0
+margin_top = 54.0
+margin_right = 149.0
+margin_bottom = 81.0
+
+[node name="Map2Pos" type="Position2D" parent="."]
+position = Vector2( 80, 504 )
+
+[node name="Map4Pos" type="Position2D" parent="."]
+position = Vector2( 984, 464 )

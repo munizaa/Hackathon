@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Screens/WinBackground.png" type="Texture" id=1]
-[ext_resource path="res://WinPage.gd" type="Script" id=2]
+[ext_resource path="res://Screens/WinPage.gd" type="Script" id=2]
 [ext_resource path="res://Screens/SpiderWin.png" type="Texture" id=3]
 
 [node name="WinPage" type="Control"]

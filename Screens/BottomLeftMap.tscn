@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Utils/images/Bottom Left Campus.png" type="Texture" id=1]
-[ext_resource path="res://Screens/Return to Main.gd" type="Script" id=2]
+[ext_resource path="res://Screens/Return4.gd" type="Script" id=2]
 [ext_resource path="res://Screens/Proceed.gd" type="Script" id=3]
 
 [node name="Control" type="Control"]
