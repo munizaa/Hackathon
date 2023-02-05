@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Blocks/DirtTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blocks/GrassTile.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Screens/Levels.gd" type="Script" id=7]
 [ext_resource path="res://Utils/images/top right background.png" type="Texture" id=8]
+[ext_resource path="res://Blocks/Health.gd" type="Script" id=9]
+[ext_resource path="res://Objects/SpiderPetr.tscn" type="PackedScene" id=10]
 
 [node name="Map3" type="Node2D"]
 script = ExtResource( 7 )
@@ -166,8 +168,18 @@ margin_top = 54.0
 margin_right = 149.0
 margin_bottom = 81.0
 
+[node name="SpiderPetr" parent="Label" instance=ExtResource( 10 )]
+position = Vector2( 45, 233 )
+
 [node name="Map2Pos" type="Position2D" parent="."]
 position = Vector2( 80, 504 )
 
 [node name="Map4Pos" type="Position2D" parent="."]
 position = Vector2( 984, 464 )
+
+[node name="HealthLabel" parent="." instance=ExtResource( 5 )]
+margin_left = 58.0
+margin_top = 17.0
+margin_right = 157.0
+margin_bottom = 44.0
+script = ExtResource( 9 )
