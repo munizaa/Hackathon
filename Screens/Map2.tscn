@@ -18,7 +18,7 @@ position = Vector2( -45, -5 )
 script = ExtResource( 10 )
 
 [node name="TopLeftBackground" type="Sprite" parent="."]
-position = Vector2( 386.5, 341 )
+position = Vector2( 381, 341 )
 scale = Vector2( 0.741146, 0.874674 )
 texture = ExtResource( 12 )
 
@@ -208,21 +208,21 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Label" parent="." instance=ExtResource( 9 )]
-margin_left = 59.0
-margin_top = 50.0
-margin_right = 158.0
-margin_bottom = 77.0
-
 [node name="Map3Pos" type="Position2D" parent="."]
 position = Vector2( 965, 274 )
 
 [node name="Map5Pos" type="Position2D" parent="."]
 position = Vector2( 105, 336 )
 
+[node name="TimerLabel" parent="." instance=ExtResource( 9 )]
+margin_left = 53.0
+margin_top = 13.0
+margin_right = 109.0
+margin_bottom = 29.0
+
 [node name="HealthLabel" parent="." instance=ExtResource( 9 )]
-margin_left = 58.0
-margin_top = 17.0
-margin_right = 157.0
-margin_bottom = 44.0
+margin_left = 53.0
+margin_top = 29.0
+margin_right = 125.0
+margin_bottom = 45.0
 script = ExtResource( 11 )

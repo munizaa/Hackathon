@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="TileMap"
-run/main_scene="res://Map1.tscn"
+run/main_scene="res://Screens/Main Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

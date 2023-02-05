@@ -1,6 +1,16 @@
 extends CollisionShape2D
 
-# Script for all collision made
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+# Called when the node enters the scene tree for the first time.
+# func _ready():
+	# add function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
 
 var speed : int = 200  # speed of player
 var gravity : int = 1000  # pulls player down

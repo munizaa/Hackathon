@@ -6,7 +6,7 @@
 [ext_resource path="res://Other/Entrance.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Blocks/Timer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Screens/Levels.gd" type="Script" id=6]
-[ext_resource path="res://Blocks/Health.gd" type="Script" id=7]
+[ext_resource path="res://Screens/HealthLabel.gd" type="Script" id=7]
 [ext_resource path="res://Utils/images/bottom right background.png" type="Texture" id=8]
 
 [node name="Map4" type="Node2D"]
@@ -252,21 +252,21 @@ position = Vector2( -47, 218 )
 [node name="Map5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1064, 248 )
 
-[node name="Label" parent="." instance=ExtResource( 5 )]
-margin_left = 89.0
-margin_top = 84.0
-margin_right = 188.0
-margin_bottom = 111.0
-
 [node name="Map3Pos" type="Position2D" parent="."]
 position = Vector2( 74, 448 )
 
 [node name="Map5Pos" type="Position2D" parent="."]
 position = Vector2( 981, 456 )
 
-[node name="HealthLabel" parent="." instance=ExtResource( 5 )]
-margin_left = 90.0
-margin_top = 136.0
-margin_right = 189.0
-margin_bottom = 163.0
+[node name="HealthLabel" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 24.0
+margin_right = 88.0
+margin_bottom = 40.0
 script = ExtResource( 7 )
+
+[node name="TimerLabel" parent="." instance=ExtResource( 5 )]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 88.0
+margin_bottom = 24.0

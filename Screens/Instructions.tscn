@@ -42,24 +42,26 @@ script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 self_modulate = Color( 0, 0, 0, 1 )
-anchor_left = -0.0476654
-anchor_top = 0.193709
-anchor_right = 0.731517
-anchor_bottom = 0.55298
+anchor_left = 0.0933852
+anchor_top = 0.15894
+anchor_right = 0.58463
+anchor_bottom = 0.584437
 margin_right = 1.64509e-05
 size_flags_horizontal = 2
 size_flags_vertical = 1
 custom_fonts/font = SubResource( 2 )
-text = "Welcome Player! 
-UCI can be a confusing campus to navigate, 
-especially when you're on the hunt for Petr 
-stickers,but it doesn't have to be! 
-Explore the campus by clicking on the map,
-and try to locate the area where you think 
-the Petr drop will occur.
-Be quick-- you only have 2 minutes to guess
-the location before it drops and a surge
-of anteaters rush before you.
+text = "Welcome Anteater! 
+UCI can be a confusing campus to 
+navigate, especially when you're on 
+the hunt for Petr stickers, but it doesn't 
+have to be! Explore the campus by 
+clicking on the map, and try to locate 
+the area where you think the Petr drop 
+will occur.Use WASD or the arrow keys 
+to control your anteater -- and be quick! 
+You only have one (1) minute to guess 
+the location and grab your sticker 
+before they run out!
 Make sure to avoid zotbots! "
 align = 1
 valign = 1
