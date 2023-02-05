@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Blocks/DarkStoneTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blocks/DirtTile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blocks/GrassTile.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Blocks/Timer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entrance.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=7]
 
 [node name="Map5" type="Node2D"]
 
@@ -106,13 +110,13 @@ position = Vector2( 704, 0 )
 position = Vector2( 448, -128 )
 
 [node name="Tile10" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 128, -256 )
+position = Vector2( 112, -256 )
 
 [node name="Tile14" parent="Tile" instance=ExtResource( 3 )]
 position = Vector2( 320, -192 )
 
 [node name="Tile15" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 64, -256 )
+position = Vector2( 72, -256 )
 
 [node name="Tile16" parent="Tile" instance=ExtResource( 3 )]
 position = Vector2( 512, -384 )
@@ -142,7 +146,7 @@ position = Vector2( 832, -448 )
 position = Vector2( 832, -448 )
 
 [node name="Tile11" parent="Tile" instance=ExtResource( 3 )]
-position = Vector2( 192, -256 )
+position = Vector2( 152, -256 )
 
 [node name="Tile12" parent="Tile" instance=ExtResource( 3 )]
 position = Vector2( 256, -192 )
@@ -158,3 +162,24 @@ position = Vector2( 576, -128 )
 
 [node name="Tile2" parent="Tile" instance=ExtResource( 3 )]
 position = Vector2( -64, -64 )
+
+[node name="Label" parent="." instance=ExtResource( 4 )]
+margin_left = 146.0
+margin_top = 87.0
+margin_right = 245.0
+margin_bottom = 114.0
+
+[node name="Map2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1072, 320 )
+
+[node name="Map4" parent="." instance=ExtResource( 5 )]
+position = Vector2( -32, 320 )
+
+[node name="Enemy" parent="." instance=ExtResource( 7 )]
+position = Vector2( 728, 520 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 272, 512 )
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 40, 384 )
