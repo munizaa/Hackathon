@@ -224,10 +224,8 @@ position = Vector2( 856, 552 )
 [node name="Node" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="."]
-margin_left = 5.0
-margin_top = 14.0
-margin_right = 71.0
-margin_bottom = 43.0
+margin_right = 40.0
+margin_bottom = 14.0
 script = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="Label"]
