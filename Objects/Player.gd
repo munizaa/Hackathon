@@ -47,11 +47,12 @@ func _physics_process(delta):
 		player.flip_h = false
 
 func kill():
-	print("PLAYER HAS DIED!!!");
+	get_tree().change_scene("res://Screens/LosePage.tscn")
+	print("Anteater has died");
 
 func _on_Player_health_updated():
 	# Temporary Variable to remember the health value
-	
+	print(" I HAVE TAKEN DAMAGE");
 	if (invulnerability_timer.is_stopped()):
 		invulnerability_timer.start()
 		
@@ -61,12 +62,13 @@ func _on_Player_health_updated():
 		
 		# modulate.a = 0.5
 		
-		var prev_health = health
-		health = max(0, health - 10)
+		var prev_health = Global.max_health
+		Global.max_health = max(0, Global.max_health - 10)
 		# Same as => health = clamp(value, 0, max_health);
 		# Indication that the player has taken some form of damage
-		if prev_health != health:
-			print(str(health));
-			if (health == 0):
+		if prev_health != Global.max_health:
+			print(str(Global.max_health));
+			if (Global.max_health <= 0):
+				print("DEATH");
 				kill();
 				emit_signal("killed");
